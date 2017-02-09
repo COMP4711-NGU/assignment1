@@ -3,30 +3,35 @@
     <head>
         <title>{pagetitle}</title>
         <meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8"/>
+        <link rel="shortcut icon" href="/img/favicon.png" />
         <link rel="stylesheet" type="text/css" media="all" href="/css/reset.css" />
         <link rel="stylesheet" type="text/css" media="all" href="/css/text.css" />
-        <link rel="stylesheet" type="text/css" media="all" href="/css/style.css" />
+        <link rel="stylesheet" type="text/css" media="all" href="/css/bootstrap-3.3.7-dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" media="all" href="/css/bootstrap-3.3.7-dist/css/bootstrap.css" />
         <link rel="stylesheet" type="text/css" media="all" href="/css/lightbox.css" />
+        <link rel="stylesheet" type="text/css" media="all" href="/css/style.css" />
     </head>
     <body>
         <div id="wrapper">
             <div id="header">
-                <span class="myhead">Simple Image Gallery</span>
+                <span class="myhead"><img width="50px" src="/img/favicon.png" />Kiwi Plant</span>
                 <span class="mynav">
                     <ul>
                         <li><a href="/">Home</a></li>
-                        <li><a href="/gallery">Gallery</a></li>
-                        <li><a href="/about">About</a></li>
+                        <li><a href="/parts">Parts</a></li>
+                        <li><a href="/assembly">Assembly</a></li>
+                        <li><a href="/history">History</a></li>
                     </ul>
                 </span>
             </div>
             <div class="alone"></div>
             <div id="content">
             	<!-- injection here -->
+                <h1 class="text-center">{pagetitle}</h1>
             	{content}
             </div>
             <div id="footer" class="span12">
-                Copyright &copy; 2014,  <a href="mailto:someone@somewhere.com">Me</a>.
+                Copyright &copy; 2014,  <a href="mailto:rachel@shellborn.com">Team NGU</a>.
             </div>
         </div>
         <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script> 
