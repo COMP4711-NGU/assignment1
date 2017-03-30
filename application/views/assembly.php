@@ -1,5 +1,6 @@
 <div class="row text-center">
     <span id="error">{error}</span>
+    <span id="message">{message}</span>
 </div>
 <form action="assembly/handle" method="POST">
 <div class="row">

@@ -110,11 +110,13 @@ class Assembly extends Application
         }
 		
         $this->data['error'] = $this->session->userdata('error');
+        $this->data['message'] = $this->session->userdata('message');
         $this->data['pagetitle'] = 'Assembly';
         $this->data['pagebody'] = 'assembly';
 
 		$this->render();
         $this->session->set_userdata('error', "");
+        $this->session->set_userdata('message', "");
 	}
 
 	public function handle() {
@@ -146,7 +148,7 @@ class Assembly extends Application
         $this->assembleRobot($top, $torso, $bottom);
         $this->removeParts($top, $torso, $bottom);
 
-        redirect('/assembly/#robots');
+        redirect('/assembly');
     }
 
     //removes parts that made the robot from the database
@@ -199,6 +201,7 @@ class Assembly extends Application
         );
 
         $this->history->add($data);
+        $this->session->set_userdata('message', "Robot assembled!");
     }
 
     //this is for next time?

@@ -21,12 +21,14 @@ class ManageParts extends Application
 		// send the data to the view 
 		$this->data['parts'] = $parts;
         $this->data['error'] = $this->session->userdata('error');
+        $this->data['message'] = $this->session->userdata('message');
 
 		$this->data['pagetitle'] = 'Parts';
 		$this->data['pagebody'] = 'parts'; // the view file 
 
 		$this->render();
         $this->session->set_userdata('error', "");
+        $this->session->set_userdata('message', "");
     }
 
     //for drilldown details of the part
@@ -103,6 +105,8 @@ class ManageParts extends Application
         $totalAmount = 0;
 
         foreach($parts as $part) {
+            $quantity++;
+
             //adding part to parts table
             $data = array(
                 'caCode' => $part->id,
@@ -130,6 +134,12 @@ class ManageParts extends Application
             );
 
             $this->history->add($data);
+        }
+
+        if($transactionType == "Purchase") {
+            $this->session->set_userdata('message', "A box of 10 parts was purchased from PRC for $100.00");
+        } else {
+            $this->session->set_userdata('message', $quantity . " parts were built.");
         }
 
         redirect('/manageparts');

@@ -1,5 +1,6 @@
 <div class="row text-center">
     <span id="error">{error}</span>
+    <span id="message">{message}</span>
 </div>
 <div class="row">
     <!-- TODO add images -->

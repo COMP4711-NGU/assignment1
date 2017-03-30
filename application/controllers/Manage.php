@@ -47,6 +47,18 @@ class Manage extends Application
             $this->data['robots'] = $robots;
         }
 
+        $response = file_get_contents('https://umbrella.jlparry.com/info/scoop/kiwi');
+        $scoop = json_decode($response);
+
+        $this->data['balance'] = $scoop->balance;
+        $this->data['boxes_bought'] = $scoop->boxes_bought;
+        $this->data['parts_returned'] = $scoop->parts_returned;
+        $this->data['parts_made'] = $scoop->parts_made;
+        $this->data['bots_built'] = $scoop->bots_built;
+        $this->data['making'] = $scoop->making;
+        $this->data['last_made'] = $scoop->last_made;
+
+
         $this->render();
         $this->session->set_userdata('error', "");
         $this->session->set_userdata('message', "");
