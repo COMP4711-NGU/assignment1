@@ -1,0 +1,66 @@
+.noMargin{
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0px;
+}
+
+.customBorder{
+    border-style: solid;
+    border-width: 2px;
+    border-color: white;
+}
+
+.customTopBorder{
+    border-top-style: solid;
+    border-top-color: white;
+    border-top-width: 2px
+}
+
+.customTopPadding{
+    padding-top: 20px;
+}
+
+.noBottomMargin{
+    margin-bottom: 0px !important;
+}
+
+.topPadding{
+    padding-top: 20px;
+}
+
+.list {
+    display: flex;
+    justify-content: center;
+}
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus{
+    background-color:#00cc44;
+    color: #000000;
+}
+
+.nav-tabs > li > a{
+    background-color: #ffffff;
+    color: #000000;
+}
+
+
+
+.customFormControl{
+    width: 20% !important;
+}
+
+.autoMargin{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.addTopPadding{
+    padding-top: 20px;
+}
+
+.table-bordered{
+    border: 2px solid #000000 !important;
+}
+
+.customTableWidth{
+    width: 95% !important;
+}

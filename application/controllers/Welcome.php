@@ -18,7 +18,7 @@ class Welcome extends Application
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
 	public function index()
-	{
+    {
         $totalSpent = $this->history->totalSpent();
         $totalEarned = $this->history->totalEarned();
         $totalParts = $this->parts->totalParts();

@@ -8,3 +8,6 @@
 /nbproject/
 .idea
 config/database.php
+*/.DS_Store
+.DS_Store
+*/apikey.txt
